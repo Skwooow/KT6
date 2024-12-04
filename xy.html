@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slideshow {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+        }
+
+.slideshow-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slideanim 20s infinite;
+    pointer-events: none;
+}
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+    animation-delay: 0;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img {
+    animation-delay: 15s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img {
+    animation-delay: 30s;
+}
+
+.slideshow-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom 30s infinite;
+}
+.slideshow-item-text {
+    max-width: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 20px 30px;
+    font-family: Verdana, sans-serif;   
+}
+.slideshow-item-text h5 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    color: #BFE2FF;
+}
+.slideshow-item-text p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+@keyframes slideanim {
+    0%{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    50%{
+        opacity: 1;
+        pointer-events: auto;
+    }    
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes zoom {
+    50%{
+        transform: scale(1.3);
+    }    
+}
+
+
+@media screen and (max-width: 1100px){
+    .slideshow-item-text{
+        max-width: 75%;
+    }
+}
+@media screen and (max-width: 456px){
+    .slideshow-item-text {
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+    }
+    .slideshow-item-text h5 {
+        font-size: 18px;
+    }
+    .slideshow-item-text p {
+        font-size: 13px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="slideshow">
+        <div class="slideshow-item">
+            <img src="./pic1.webp">
+            <div class="slideshow-item-text">
+            </div>
+        </div>
+        <div class="slideshow-item">
+            <img src="./afdffdfd.webp">
+            <div class="slideshow-item-text">
+            </div>
+        </div>
+        <div class="slideshow-item">
+            <img src="./SPACE_0sdsdssssss6.webp">
+            <div class="slideshow-item-text">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
